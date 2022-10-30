@@ -4,7 +4,7 @@ from botocore.exceptions import ClientError
 
 def get_secret():
 
-    secret_name = "test-pavan"
+    secret_name = input('please enter secret name')
     region_name = "ap-south-1"
 
     # Create a Secrets Manager client
