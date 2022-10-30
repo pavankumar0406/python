@@ -26,8 +26,6 @@ def get_secret():
     # Decrypts secret using the associated KMS key.
     secret = get_secret_value_response['SecretString']
     print(secret)
-    print(secret[test])
-    print(secret[test1])
 get_secret()
 
     # Your code goes here.
