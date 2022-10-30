@@ -13,11 +13,12 @@ def get_secret():
         service_name='secretsmanager',
         region_name=region_name
     )
-
+    print('boto3 called")
     try:
         get_secret_value_response = client.get_secret_value(
             SecretId=secret_name
         )
+        print(get_secret_value_response)
     except ClientError as e:
         # For a list of exceptions thrown, see
         # https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_GetSecretValue.html
@@ -26,5 +27,6 @@ def get_secret():
     # Decrypts secret using the associated KMS key.
     secret = get_secret_value_response['SecretString']
     print(secret)
+get_secret()
 
     # Your code goes here.
