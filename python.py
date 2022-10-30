@@ -13,7 +13,7 @@ def get_secret():
         service_name='secretsmanager',
         region_name=region_name
     )
-    print('boto3 called")
+    print('boto3 called')
     try:
         get_secret_value_response = client.get_secret_value(
             SecretId=secret_name
