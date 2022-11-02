@@ -1,6 +1,6 @@
 import boto3
 
-client = boto3.client('secretmanager')
+client = boto3.client('secretsmanager')
 
 region_name = "ap-south-1"
 
