@@ -17,4 +17,4 @@ def get_secret():
     Name = 'MyDBsecrets',
     SecretString='{"username":"admin", "password":"password123"}'
     )
-get_secret()
+
