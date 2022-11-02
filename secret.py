@@ -2,10 +2,8 @@ import boto3
 
 client = boto3.client('secretsmanager')
 
-region_name = "ap-south-1"
-
 response = client.create_secret(
-    region_name=region_name,
+    region_name="ap-south-1",
     Name = 'MyDBsecrets',
     SecretString='{"username":"admin", "password":"password123"}'
 )
